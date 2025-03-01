@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Google Login - Test Phase</title>
+    <style>
+        /* Basic styling to make it look like Google login */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f3f4;
+            margin: 0;
+        }
+
+        .login-box {
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #202124;
+            font-weight: bold;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #dcdfe1;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-btn:hover {
+            background-color: #357ae8;
+        }
+
+        .login-text {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .login-text a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+        .google-logo {
+            display: block;
+            margin: 0 auto 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <img class="google-logo" src="https://logos-world.net/wp-content/uploads/2020/09/Google-Symbol.png" alt="Google Logo" width="100">
+        <h2>Sign in with Google</h2>
+        <form id="fakeLoginForm">
+            <input class="input-field" type="email" placeholder="Email or phone" required><br>
+            <input class="input-field" type="password" placeholder="Enter your password" required><br>
+            <button class="login-btn" type="submit">Sign in</button>
+        </form>
+        <div class="login-text">
+            <p>Not your account? <a href="#">Use another account</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Fake login simulation (for testing purposes)
+        document.getElementById('fakeLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            // Simulate login success
+            alert("Successfully logged in (fake). Redirecting...");
+
+            // Redirect to the YouTube video
+            window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+        });
+    </script>
+
+</body>
+</html>
